@@ -1,0 +1,27 @@
+1.1
+SELECT *
+FROM `goit-rdb-hw-03`.`products`;
+
+1.2
+SELECT name, phone
+FROM `goit-rdb-hw-03`.`shippers`;
+
+2
+SELECT AVG(price) as avg_price, MAX(price) as max_price, MIN(price) as min_price
+FROM `goit-rdb-hw-03`.`products`;
+
+3
+SELECT DISTINCT category_id, price
+FROM `goit-rdb-hw-03`.`products`
+ORDER BY price DESC
+LIMIT 10;
+
+4
+SELECT COUNT(*)
+FROM `goit-rdb-hw-03`.`products`
+WHERE price BETWEEN 20 and 100;
+
+5
+SELECT supplier_id, COUNT(*) as total_products, AVG(price) as avg_price
+FROM `goit-rdb-hw-03`.`products`
+GROUP BY supplier_id;
